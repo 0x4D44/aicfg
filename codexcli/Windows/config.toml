@@ -1,0 +1,49 @@
+model = "gpt-5"
+model_reasoning_effort = "high"
+approval_policy        = "never"
+sandbox_mode           = "workspace-write"
+
+# Global “rules” (merged with any AGENTS.md in your repo)
+instructions = """
+- Never write outside the current workspace without asking
+- All code must compile cleanly with no warnings
+- For Rust: run `cargo fmt && cargo clippy && cargo test -q`
+- For all git checkins use the username: '0x4D44' and email 'martingdavidson@gmail.com'
+- When writing designs, plans and documents start the name with "YYYY.MM.DD - "
+- Default to writing designs, plans and test plans to markdown files. Designs are stored in the top-level 'designs' folder in the workspace; plans in 'plans' and test-plans in 'test-plans'
+- Aim for simple, clean solutions focused on solving the immediate problem.
+- Write as little code as possible.
+- Do not overengineer - solve todays problem not overengineer in an attempt to future proof
+"""
+
+notify = ["powershell.exe", "-ExecutionPolicy", "Bypass", "-File", "C:\\Users\\MartinDavidson\\.codex\\notify.ps1"]
+
+[tools]
+web_search = true
+
+[projects.'\\?\C:\language\mdconfcli']
+trust_level = "trusted"
+
+[projects.'\\?\C:\language\mdslackcli']
+trust_level = "trusted"
+
+[projects.'\\?\C:\language\mdcode']
+trust_level = "trusted"
+
+[projects.'\\?\C:\language\a']
+trust_level = "trusted"
+
+[projects.'\\?\C:\language\mdmailcli']
+trust_level = "trusted"
+
+[projects.'\\?\C:\language\mdmdview']
+trust_level = "trusted"
+
+[projects.'\\?\C:\language\mdjiracli']
+trust_level = "trusted"
+
+[projects.'\\?\C:\language\mdmcp']
+trust_level = "trusted"
+
+[projects.'\\?\C:\language\mvmv4']
+trust_level = "trusted"

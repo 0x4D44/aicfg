@@ -1,0 +1,1 @@
+- All code must always compile cleanly with no compile warnings. Cargo fmt and clippy must also be clean.
